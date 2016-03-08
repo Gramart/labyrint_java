@@ -2092,7 +2092,7 @@ public class MyMenu extends JFrame {
 		}
 	
 	public class CommandLineChanger implements Changeable{
-
+		// My_part
 		//private final MazeBoard val;
 		private final int val;
 		private final MazeField[][] undo_board;
@@ -2107,6 +2107,7 @@ public class MyMenu extends JFrame {
 		private boolean undo_shift;
 		
 		public CommandLineChanger(MazeBoard v, int player_on_t, JLabel[][] GameBoardSquares,boolean shft){
+			// My_part
 			/**
 			 * funkce pro undo
 			 * funkce for saving data, ktere slouzi k vraceni k predeslemu stavu
@@ -2144,6 +2145,7 @@ public class MyMenu extends JFrame {
 			
 		}
 		@Override
+		// My_part
 		public void undo() {
 			//znovu nacteni objektu a znovu vykresleni
 			//System.out.println(val + " undone");
