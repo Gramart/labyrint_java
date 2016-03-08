@@ -291,6 +291,7 @@ public class MazeBoard implements java.io.Serializable{
 	
 	
 	public static int getRotation(int poloha, boolean free) {
+		// My_part
 		int rotation = 0;
 		
 		if (free == true) rotation = freesutr.rotation;
@@ -311,6 +312,7 @@ public class MazeBoard implements java.io.Serializable{
 	}
 
 	public static void setRotation(int rotation, int poloha, boolean free) {
+		// My_part
 		/*
 		System.out.print("\ndostal jsem do fce:");
 		System.out.print(rotation);
@@ -378,6 +380,7 @@ public class MazeBoard implements java.io.Serializable{
 	}
 	
 	public void shift(MazeField mf){
+		// My_part
 		int column = mf.col()-1;
 		int radek = mf.row()-1;
 
@@ -754,6 +757,7 @@ public class MazeBoard implements java.io.Serializable{
 	}
 	
     public void writeObject(java.io.ObjectOutputStream stream)
+    // My_part
             throws IOException {
         stream.writeObject(board);
         stream.writeInt(id);
@@ -763,6 +767,7 @@ public class MazeBoard implements java.io.Serializable{
     }
 
     public void readObject(java.io.ObjectInputStream stream)
+    // My_part
             throws IOException, ClassNotFoundException {
         board = (MazeField[][]) stream.readObject();
         id = stream.readInt();
@@ -773,6 +778,7 @@ public class MazeBoard implements java.io.Serializable{
     
     
     public static void turnRight(){
+    	// My_part
 		
 		if (freesutr.outway[0] == CANGO.RIGHT){
 			freesutr.outway[0] = CANGO.DOWN;
