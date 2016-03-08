@@ -2,7 +2,7 @@ package ija.board;
 
 public class MazeCard implements java.io.Serializable{
 	/**
-	 * 
+	 *  My_part
 	 */
 	private static final long serialVersionUID = -1155514089673159782L;
 	//private MazeCard mc;
