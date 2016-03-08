@@ -1,0 +1,38 @@
+<project name="Java-Labyrint-2015" basedir="." default="main">
+<!--
+    <property name="src.dir"     value="src"/>
+
+    <property name="build.dir"   value="build"/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="jar.dir"     value="${build.dir}/jar"/>
+
+    <property name="main-class"  value="oata.HelloWorld"/>
+
+-->
+    <target name="compile">
+        <mkdir dir="build"/>
+        <javac srcdir="src" destdir="build"/>
+		<javadoc sourcepath="src" destdir="doc" />
+
+	<copy todir="build/lib">
+	<fileset dir="lib" />
+	</copy>
+<!--   <target name="jar" depends="compile"> -->
+        <mkdir dir="dest-client"/>
+        <jar destfile="dest-client/ija2015-client.jar" basedir="build">
+            <manifest>
+                <attribute name="Main-Class" value="ija.design.gui.MainGui"/>
+            </manifest>
+        </jar>
+<!--    </target> -->
+    </target>
+
+    <target name="run">
+        <java jar="dest-client/ija2015-client.jar" fork="true"/>
+    </target>
+<!-- 
+    <target name="clean-build" depends="clean,jar"/>
+
+    <target name="main" depends="clean,run"/>
+ -->
+</project>
