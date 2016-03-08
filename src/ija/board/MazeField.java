@@ -3,7 +3,7 @@ package ija.board;
 @SuppressWarnings("serial")
 public class MazeField implements java.io.Serializable{
 	/**
-	 * 
+	 * My_part
 	 */
 
 	private int Row = 0;
